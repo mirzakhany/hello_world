@@ -6,7 +6,7 @@ metadata:
     env: develop
 spec:
   containers:
-  - image: mirzakhani/hello_world:v0.4
+  - image: mirzakhani/hello_world:latest
     name: kubia
     ports:
     - containerPort: 8080
@@ -15,3 +15,4 @@ spec:
       httpGet:
         path: /healthz
         port: 8080  
+      initialDelaySeconds: 15  
