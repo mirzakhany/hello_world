@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-var isHealthy = false
+var isHealthy = true
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	hostName, _ := os.Hostname()

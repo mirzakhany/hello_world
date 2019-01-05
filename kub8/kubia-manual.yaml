@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual
+  labels:
+    env: develop
+spec:
+  containers:
+  - image: mirzakhani/hello_world:v0.4
+    name: kubia
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    livenessProbe:
+      httpGet:
+        path: /healthz
+        port: 8080  
