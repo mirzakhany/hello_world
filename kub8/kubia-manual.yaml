@@ -5,6 +5,8 @@ metadata:
   labels:
     env: develop
 spec:
+  nodeSelector:
+    gpu: "true"
   containers:
   - image: mirzakhani/hello_world:latest
     name: kubia
@@ -15,4 +17,4 @@ spec:
       httpGet:
         path: /healthz
         port: 8080  
-      initialDelaySeconds: 15  
+      initialDelaySeconds: 15 
